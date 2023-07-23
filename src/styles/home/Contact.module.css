@@ -1,0 +1,171 @@
+.holder {
+	min-height: 100vh;	
+	display: flex;
+	justify-content: center;
+
+	color: white;
+
+	padding: 2rem;
+	padding-top: 5rem;
+}
+
+.content {  width: 100%;  }
+
+.head {
+	position: relative;
+	font-family: 'Fira Code', monospace;
+	font-weight: bold;
+	font-size: 5rem;
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+
+	display: none;
+}
+
+.body {
+	display: flex;
+}
+
+.body > div {
+	width: 100%;
+}
+
+.label {
+	font-family: 'Victor Mono', monospace;
+	font-size: 0.8rem;
+	padding: 0.5rem;
+
+	display: block;
+
+	color:  #999;
+	text-transform: uppercase;
+}
+
+.text {
+	width: 100%;
+	padding: 1rem;
+
+	color: white;
+
+	background: #222;
+	border: none;
+	border: 1px solid #222;
+	border-radius: 0.2rem;
+
+	outline: none;
+
+	font-family: 'Victor Mono', monospace;
+
+	line-height: 1.7em;
+
+	color: #ddd;
+}
+
+.text::placeholder {
+	font-weight: lighter;
+}
+
+.button1 {
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 0.2em;
+
+	background: var(--highlight-color);
+	outline: none;
+
+	color: white;
+
+	font-family: 'Victor Mono', monospace;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 1rem;
+}
+
+
+
+.socialList > div {
+	position: relative;
+    display: inline-block;
+    margin-right: 1.5em;
+
+    transition: 300ms ease-in-out;
+}
+
+.socialList > div::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left:  50%;
+	right: 50%;
+
+	height:  110%;
+	border-bottom: 1px solid white;
+
+	z-index: -1;
+
+	transition: all 500ms;
+}
+
+.socialList > div:hover::after {
+	left: 0;
+	right: 0;
+}
+
+.social:hover {
+	cursor: none;
+}
+
+.letsTalkSection {
+	font-family: 'Victor Mono', monospace;
+	font-weight: lighter;
+	color: #ddd;
+
+	font-size: 0.9rem;
+
+	padding-top: 2em;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	height: 100%;
+}
+
+.info > * {
+	margin-bottom: 1em;
+}
+
+
+
+@media only screen and (min-width:  768px) {
+	.holder {
+		padding-top: 0rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.content {
+		width: 70vw;
+	}
+
+	.head {
+		line-height: unset;
+	}
+
+	.body > div {
+		width: 50%;
+	}
+
+}
+
+@media only screen and (min-width:  1280px) {
+	.content {
+		width: 60vw;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.content {
+		width: 50vw;
+	}
+}
