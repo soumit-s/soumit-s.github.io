@@ -48,12 +48,21 @@ export default class ContentPanel extends React.Component {
         this.gotoLandingPage = this.changePage.bind(this, 'landing')
     }
 
+    updateCanvasSize() {
+            let r = document.body.getBoundingClientRect()
+            console.log(window.innerHeight)
+            this.camera.aspect = r.width / (window.screen.availHeight - this.interfaceHeight)
+            this.camera.updateProjectionMatrix()
+            this.renderer.setSize(r.width, window.screen.availHeight - this.interfaceHeight)
+    }
+
     componentDidMount() {
         this.scene = new THREE.Scene()
-        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        this.interfaceHeight = window.screen.availHeight - window.innerHeight
+        this.camera = new THREE.PerspectiveCamera(75, document.body.getBoundingClientRect().width / window.innerHeight, 0.1, 1000);
 
         this.renderer = new THREE.WebGLRenderer({ alpha: true });
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.updateCanvasSize()
         this.bg.current.appendChild(this.renderer.domElement);
 
         this.material = new THREE.LineBasicMaterial({ color: 'white' })
@@ -76,6 +85,11 @@ export default class ContentPanel extends React.Component {
 
         this.landingRef.current.style.display='unset'
         //this.changePage('landing', 'landing')
+
+
+        new ResizeObserver(() => {
+            this.updateCanvasSize()
+        }, false).observe(document.body)
     }
 
     animate(funcs, meta, options, timeStamp) {
