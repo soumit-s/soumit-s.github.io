@@ -1,0 +1,136 @@
+.holder {
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --showcase-bg-color: transparent;/*#323449;*/
+
+    background-color: var(--showcase-bg-color);
+    padding: 1cm 0 2cm 0;
+}
+
+.showcase {
+    z-index: 10;
+}
+
+.head {
+    margin-bottom: 2cm;
+
+    z-index: 3;
+
+    color: white;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+
+.projectList {
+    --fsize: 1rem;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+
+.project {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Victor Mono';
+}
+
+.project::after {
+    content: attr(pname);
+    position: absolute;
+    color: var(--highlight-color);
+    top: 100%;
+    font-weight: bolder;
+    font-size: var(--fsize);
+
+    transition: all 300ms;
+}
+
+.project:hover::after {
+    top: 0;
+}
+
+.project:hover > .projectName {
+    top: calc(var(--fsize) * -1 - 0.2rem);
+}
+
+
+.projectName {
+    position: relative;
+    top: 0;
+
+    font-weight: bold;
+    font-size: var(--fsize);
+
+    transition: all 300ms;
+
+    color: #aaa;
+    --c: var(--head-text-color);
+}
+
+
+
+.tags {    
+    background: black;
+    font-size: 0.8rem;
+    overflow: hidden;
+    transition: all 300ms;
+
+    height: 0;
+
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+
+.tag {
+    color: blue;
+    font-family: 'Space Mono';
+
+    padding: 0.2rem 0.5rem;
+
+    display: inline-block;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .projectHolder {
+        display: inline-block;
+    }
+
+    .showcase {
+        max-width: 80vw;
+    }
+
+    .holder { height: 100vh; }
+}
+
+/* all screens below 1366px width */
+@media only screen and (min-width: 1366px) {
+    .showcase {
+        max-width: 60vw;
+    }
+}
+
+
+/* Only for mobile devices */
+@media only screen and (max-width: 768px) {
+
+    .holder {
+        padding: 1.7em;
+    }
+
+}
