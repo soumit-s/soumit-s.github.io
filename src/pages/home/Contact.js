@@ -17,7 +17,7 @@ export default function Contact() {
 					<div></div>
 				</div>
 				<div className={styles.body}>
-					<div className={'pc-only'}><LetsTalk /></div>
+					<div className={styles.letsTalkHolder}><LetsTalk /></div>
 					<div><ContactForm /></div>
 				</div>
 			</div>
