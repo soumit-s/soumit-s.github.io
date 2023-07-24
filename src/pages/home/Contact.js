@@ -92,7 +92,7 @@ function LetsTalk() {
 					fontWeight: 'bold',
 					fontSize: '4em',
 					lineHeight: '1em',
-				}}>Let's Talk</div>
+				}}>Let&apos;s Talk</div>
 			</div>
 		</div>
 	)
