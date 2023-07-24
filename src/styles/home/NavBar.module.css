@@ -7,7 +7,7 @@
 }
 
 .list > li {
-	margin-right: 1em;
+	margin-right: 0.5em;
 }
 
 .item {
@@ -38,4 +38,10 @@
 
 .item:hover > .lower {
 	bottom: 100%;
+}
+
+@media only screen and (min-width:  768px) {
+	.list > li {
+		margin-right: 1em;
+	}
 }
