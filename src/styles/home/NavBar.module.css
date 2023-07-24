@@ -1,0 +1,41 @@
+.list {
+	list-style: none;
+	padding: 1rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.list > li {
+	margin-right: 1em;
+}
+
+.item {
+	overflow: hidden;
+	position: relative;
+
+	font-family: 'Victor Mono', monospace;
+}
+
+.upper {
+	position: relative;
+	transition: all 250ms;
+	bottom: 0;
+}
+
+
+.lower {
+	position: relative;
+	color: var(--highlight-color);
+
+	transition: all 250ms;
+	bottom: 0;
+}
+
+.item:hover > .upper {
+	bottom: 100%;
+}
+
+.item:hover > .lower {
+	bottom: 100%;
+}
