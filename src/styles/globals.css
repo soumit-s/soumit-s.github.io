@@ -49,54 +49,19 @@ body {
     }
 }
 
-/* 
-#404258
-#474E68
-#50577A
-#6B728E 
-*/
 
-/*
-#27374D
-#526D82
-#9DB2BF
-#DDE6ED
-*/
-
-/*
-        --body-background-color: rgb(64, 66, 88);
-        --head-text-color: #7c86ab;
-        --normal-text-color: #6B728E;
-        --head2-text-color: rgb(138, 141, 169);
-*/
-
-/*  Temporary switching of the color schemes since I dont know
-    how to change the preferred system color scheme in ubuntu. */
-@media (prefers-color-scheme: light) {
-    :root {
-        --body-background-color: #050505;
-        --head-text-color: #aaa;
-        --normal-text-color: #ddd;
-        --head2-text-color: #ddd;
-        /*--body-background-color: #27374D;
-        --head-text-color: #526D82;
-        --normal-text-color: #6B728E;
-        --head2-text-color: rgb(138, 141, 169);*/
-
+:root {
+    --body-background-color: #050505;
+    --head-text-color: #aaa;
+    --normal-text-color: #ddd;
+    --head2-text-color: #ddd;
         
 
-        --head-text-font-family: 'Roboto Mono', sans-serif;
-        --normal-text-font-family: 'Titillium Web', sans-serif;
-
-        --dummy-text-font-family: 'Flow Circular';
-    }
+    --head-text-font-family: 'Roboto Mono', sans-serif;
+    --normal-text-font-family: 'Titillium Web', sans-serif;
+    --dummy-text-font-family: 'Flow Circular';
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --body-background-color: orange;
-    }
-}
 
 body {
     background: var(--body-background-color);
