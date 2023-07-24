@@ -1,0 +1,189 @@
+.holder {
+	max-width: 100vw;
+}
+
+.content {
+	padding: 2rem;
+}
+
+.head {
+	font-family: 'Space Mono', monospace;
+	font-size: 3rem;
+
+	font-weight: bold;
+	color: white;
+}
+
+.fw {
+	color: #bbb;
+	display: flex;
+	align-items: center;
+
+	width: fit-content;
+
+	font-family: 'Victor Mono', monospace;
+	font-size: 0.8rem;
+
+	border: 0px solid #aaa;
+}
+
+.fw > * {
+	padding: 0.3rem;
+}
+
+.fwList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.fwList > div {
+	padding: 0 1rem 1rem 0;
+}
+
+.categoryName {
+	color:  white;
+	font-family: 'Victor Mono', monospace;
+	font-style: italic;
+	margin-top: 0;
+}
+
+
+.clistEl {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+}
+
+.clistEl::after {
+	content: "";
+	position: absolute;
+	top:  1em;
+	left:  0.5em;
+	bottom: 0;
+
+	border-left: 1px solid #eee;
+}
+
+.clistEl[data-last-el="true"]::after {
+	border-image: linear-gradient(to bottom, #eee, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.clistEl_Joint {
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.clistEl_Content {
+	position: relative;
+	top: -0.25em;
+}
+
+.topic {
+	--head-size: 1.1rem;
+}
+
+
+.topicHead {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom:  calc(2 * var(--head-size));
+}
+
+.topicFolder {
+	font-family: 'Fira Code', monospace;
+	font-weight: lighter;
+	font-size: var(--head-size);
+	margin-right: 1em;
+	color: #eee;
+}
+
+.topicName {
+	font-family: 'Fira Code', monospace;
+	font-size: var(--head-size);
+
+	color:  #eee;
+
+	margin-bottom: 0.5em;
+}
+
+.topicDesc {
+	font-family: 'Victor Mono', monospace;
+	font-size: 0.9rem;
+	color:  #aaa;
+
+	line-height: 1.7em;
+}
+
+.topicBody {
+	padding-left: calc(2 * var(--head-size));
+}
+
+
+.topics > * {
+	margin-bottom: 4em;
+}
+
+
+
+.langList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.langList > * {
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.lang {
+	position: relative;
+	padding: 1em;
+	border: 1px solid #333;
+	border-radius: 0.2cm;
+	max-width: fit-content;
+
+	display: inline-block;
+}
+
+.lang:hover::after {
+	content: attr(data-tooltip);
+	font-family: 'Space Mono', monospace;
+
+	color: #ffffffbb;
+	background: linear-gradient(to right, blueviolet, skyblue);
+	border-radius: 0.1cm;
+
+	padding: 0.3em 1em;
+
+	position: absolute;
+	bottom: 120%;
+	left: 50%;
+
+	width: fit-content;
+
+	box-shadow: 0 0 10px 5px #ffffff44;
+}
+
+@media only screen and (min-width: 768px) {
+	.holder {
+		display: flex;
+		justify-content: center;
+		padding-top: 5rem;
+	}
+
+	.content {
+		max-width: 90vw;
+	}
+
+	.head {
+		line-height: unset;
+		font-size: 5rem;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.content {
+		max-width: 50vw;
+	}
+}
