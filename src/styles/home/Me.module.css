@@ -1,0 +1,82 @@
+.kwd {
+	color: var(--highlight-color);
+	font-style: italic;
+}
+
+.holder {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+
+	font-family: 'Victor Mono', monospace;
+	font-weight: 400;
+	color: #aaa;
+
+	padding: 2cm 0;
+}
+
+.content {
+	padding: 0 2rem;
+	line-height: 1.6rem;
+	font-size: 0.9rem;
+}
+
+.head {
+	font-family: 'Victor Mono', monospace;
+	font-weight: normal;
+	font-size: 3rem;
+	color: white;
+	line-height: 1em;
+
+	/*-webkit-text-stroke: 1px white;*/
+}
+
+.content >> a {
+	text-decoration: none;
+}
+
+
+.checkOut {
+	font-family: 'Space Grotesk', monospace;
+	font-weight: bold;
+	font-size: 1.2rem;
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	color: white;
+	margin: 2em 0;
+}
+
+.checkOut > svg {
+	transition: all 200ms ease-in;
+}
+
+.checkOut:hover > svg {
+	transform: rotate(45deg);
+}
+
+.link {
+	text-decoration: underline;
+	color: inherit;
+	font-style: italic;
+}
+
+@media only screen and (min-width:  768px) {
+	.holder {
+		padding-top: 10rem;
+	}
+
+	.content {
+		max-width: 90vw;
+	}
+
+	.head {
+		line-height: unset;
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+	.content {
+		max-width: 50vw;
+	}
+}
