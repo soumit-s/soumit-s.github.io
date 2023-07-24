@@ -1,0 +1,49 @@
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.content {
+    color: white;
+}
+
+.head {
+    font-family: 'Space Mono', monospace;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.head2 {
+    font-family: 'Fira Code', monospace;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #aaa;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .holder {padding: 0;}
+    
+    .content {
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1280px) {
+    .content {
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .content {
+        width: 50vw;
+    }
+}
