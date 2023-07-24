@@ -7,6 +7,8 @@
 
 	padding: 2rem;
 	padding-top: 5rem;
+
+	width: 100%;
 }
 
 .content {  width: 100%;  }
@@ -22,12 +24,12 @@
 	display: none;
 }
 
-.body {
-	display: flex;
-}
-
 .body > div {
 	width: 100%;
+}
+
+.letsTalkHolder {
+	margin-bottom: 5rem;
 }
 
 .label {
@@ -150,6 +152,10 @@
 
 	.head {
 		line-height: unset;
+	}
+
+	.body {
+		display: flex;
 	}
 
 	.body > div {
