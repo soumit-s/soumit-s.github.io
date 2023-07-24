@@ -7,7 +7,7 @@ export default function NavBar({ items, goto }) {
         <nav className={styles.bar}>
             <ul className={styles.list}>
                 {
-                    items.map((item, i) => [
+                    items && items.map((item, i) => [
                         (
                             i ?
                                 <li key={i+items.length}>
