@@ -13,8 +13,6 @@ export function sendMail({email, message}, callback) {
 
 	const body=generateBody(email, message)
 
-	console.log(body)
-
 	Email.send({
 		SecureToken: TOKEN,
 		To: 'soumit.srim@gmail.com',
