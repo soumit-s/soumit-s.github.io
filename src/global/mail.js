@@ -3,10 +3,7 @@
 const TOKEN = '1df714f3-22db-4a3c-8154-29c0d9c2573b'
 
 function generateBody(email, message) {
-	return `EMAIL: ${email},\n
-------------------\n
-${message}
-`
+	return `EMAIL: ${email}<br>------------------<br>\n${message}`
 }
 
 export function sendMail({email, message}, callback) {
