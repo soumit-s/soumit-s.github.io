@@ -6,6 +6,8 @@ import SvgDiscordComponent from '@/svgs/SvgDiscordComponent'
 import SvgGithubComponent from '@/svgs/SvgGithubComponent'
 import SvgTwitterComponent from '@/svgs/SvgTwitterComponent'
 
+import { sendMail } from '@/global/mail'
+
 import React, { useRef, useState } from 'react'
 
 export default function Contact() {
@@ -26,6 +28,25 @@ export default function Contact() {
 }
 
 function ContactForm() {
+	const [email, setEmail] = useState('')
+	const [message, setMessage] = useState('')
+
+	const submit = () => {
+
+		sendMail({email, message}, (err) => {
+			if (err === 'OK') {
+				alert("Sent successfully !")
+				setEmail('')
+				setMessage('')
+				return;
+			}
+
+			console.log(err)
+
+			alert('Failed to send... Try again !')
+		})
+	}
+
 	return (
 		<div>
 			<div style={{ margin: "1em 0" }}>
@@ -33,7 +54,8 @@ function ContactForm() {
 					Email
 				</label>
 				<div>
-					<input type='text' className={styles.text} placeholder='yourmail@example.com' />
+					<input type='text' className={styles.text} placeholder='yourmail@example.com' 
+						value={email} onChange={(e) => setEmail(e.target.value)}/>
 				</div>
 			</div>
 			<div style={{ marginBottom: "1em" }}>
@@ -45,6 +67,10 @@ function ContactForm() {
 					}}
 
 					placeholder='Your Message'
+
+					value={message}
+
+					onChange={(e) => setMessage(e.target.value)}
 				>
 					
 				</textarea>
@@ -54,7 +80,7 @@ function ContactForm() {
 				alignItems: 'center',
 				marginTop: '4em',
 			}}>
-				<div><button className={styles.button1}>Send</button></div>
+				<div><button className={styles.button1} onClick={() => submit()}>Send</button></div>
 				<div>
 					<SocialList />
 				</div>
@@ -148,7 +174,7 @@ function Social({ name, color, logo, href }) {
 function SocialList() {
 	const socials = [
 		{ name: 'Github', color: 'white', logo: SvgGithubComponent, href: 'https://github.com/soumit-s' },
-		{ name: 'Discord', color: 'blue', logo: SvgDiscordComponent, href: '' },
+		{ name: 'Discord', color: 'blue', logo: SvgDiscordComponent, href: 'https://discordapp.com/users/s0umit' },
 		{ name: 'Twitter', color: 'skyblue', logo: SvgTwitterComponent, href: '' }
 	]
 
