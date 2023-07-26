@@ -81,6 +81,15 @@
 	font-style: italic;
 	font-weight: lighter;
 	font-size: 1rem;
+
+	outline-color: transparent;
+}
+
+.button1:hover {
+	outline: 1px solid;
+	outline-offset: 2px;
+
+	outline-color: #333;
 }
 
 
@@ -113,9 +122,6 @@
 	right: 0;
 }
 
-.social:hover {
-	cursor: none;
-}
 
 .letsTalkSection {
 	font-family: 'Victor Mono', monospace;
