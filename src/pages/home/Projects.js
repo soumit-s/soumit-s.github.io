@@ -109,11 +109,11 @@ function TagList({ tags, ...props }) {
     return (
         <div className={styles.tagList} {...props}>
             {
-                tags.map((v, i) => <>
+                tags.map((v, i) => (
                     <div key={i} className={styles.tag}>
                         {v}
                     </div>
-                </>)
+                ))
             }
         </div>
     )
