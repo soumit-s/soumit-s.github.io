@@ -14,9 +14,12 @@ import SvgReactComponent from '@/svgs/SvgReactComponent'
 import SvgRustComponent from '@/svgs/SvgRustComponent'
 import SvgVueComponent from '@/svgs/SvgVueComponent'
 
+import SvgGinGonicComponent from '@/svgs/SvgGinGonicComponent'
+
 import React from 'react'
 
 import { forwardRef } from 'react'
+import SvgGoComponent from '@/svgs/SvgGoComponent'
 
 export default function Stack() {
 	return (
@@ -54,6 +57,9 @@ function LanguagesIUseTopic() {
 	return (
 		<Topic name='Programming Languages that I use'>
 			<div className={styles.langList} style={{paddingTop: '0.5em'}}>
+				<Language name='Golang'>
+					<SvgGoComponent width={iconWidth} height={iconHeight} />
+				</Language>
 				<Language name='JavaScript'>
 					<SvgJsComponent width={iconWidth} height={iconHeight} />
 				</Language>
@@ -104,6 +110,9 @@ const FrontendStack = forwardRef(({ svl }, ref) => {
 const BackendStack = forwardRef(({ svl }, ref) => {
 	return (
 		<Category name='Backend' ref={ref}>
+			<Fw name='Gin'>
+				<SvgGinGonicComponent width={svl} height={svl} />
+			</Fw>
 			<Fw name='NodeJS'>
 				<SvgNodeJsComponent width={svl} height={svl} />
 			</Fw>
