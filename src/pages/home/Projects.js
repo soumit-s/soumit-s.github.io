@@ -8,20 +8,6 @@ import TypeIt from 'typeit';
 export default function () {
     const headRef = useRef()
 
-    // useEffect(() => {
-    //     new TypeIt(headRef.current, {
-    //         speed: 50,
-    //         startDelay: 900,
-    //         afterComplete: (i) => {
-    //             i.destroy()
-    //         }
-    //     })
-    //     .type('These are the')
-    //     .break()
-    //     .type('things I have done')
-    //     .go()
-    // }, [])
-
     return (
         <div className={styles.holder}>
             <div className={styles.showcase}>

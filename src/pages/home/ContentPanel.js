@@ -7,6 +7,7 @@ import Me from './Me';
 import Stack from './Stack';
 import Contact from './Contact';
 import Landing from './Landing';
+import { MouseCursor } from '@/global/MouseCursor';
 
 export default class ContentPanel extends React.Component {
     constructor(props) {
@@ -321,7 +322,8 @@ export default class ContentPanel extends React.Component {
     render() {
         return (
             <div className={styles.contentPanel}>
-                <MouseFollower />
+                {/* <MouseFollower /> */}
+                <MouseCursor />
                 <div
                     ref={this.bg}
                     style={{
