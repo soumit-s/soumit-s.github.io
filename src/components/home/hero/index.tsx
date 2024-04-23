@@ -1,4 +1,7 @@
+import ReachMeButton from "@/components/reach-me-button";
 import SocialsPanel from "@/components/socials-panel";
+import SvgDownload1 from "@/components/svg/Download1.svg";
+import Link from "next/link";
 
 const Hero = () => (
   <section className="px-8 h-full flex-col items-center">
@@ -13,12 +16,17 @@ const Hero = () => (
       <u>performant</u>, <u>scalable</u> and <u>fault-tolerant</u> backend
       services.
     </p>
-    <div className="mt-8">
+    <div className="mt-8 flex gap-8">
+      <ReachMeButton />
       <SocialsPanel />
     </div>
   </section>
 );
 
-const Kwd = ({ children }: React.PropsWithChildren) => <span className="font-victor-mono italic text-sm text-blue-500 font-black">{children}</span>;
+const Kwd = ({ children }: React.PropsWithChildren) => (
+  <span className="font-victor-mono italic text-sm text-blue-500 font-black">
+    {children}
+  </span>
+);
 
 export default Hero;

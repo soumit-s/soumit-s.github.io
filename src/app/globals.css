@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --socials-color: #888;
   --accent-color: #000;
   --common-color: #000;
   --foreground-color: theme(textColor.neutral.800);

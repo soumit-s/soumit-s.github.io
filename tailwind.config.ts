@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        socials: "var(--socials-color)",
         common: "var(--common-color)",
         accent: "var(--accent-color)",
         foreground: "var(--foreground-color)",
