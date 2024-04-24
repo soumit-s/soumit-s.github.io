@@ -38,7 +38,7 @@ const getOnClickHandler = (onClick: string | React.MouseEventHandler) => {
 };
 
 const Footer = ({ entries = footerEntries }: FooterProps) => (
-  <section className="py-2 px-8">
+  <section className="py-2 px-8 sm:px-0">
     <div className="flex gap-4 justify-between font-work-sans text-neutral-800">
       <div className="w-1/2">
         <div className="font-victor-mono italic font-medium text-[0.77em] leading-6 mb-6">

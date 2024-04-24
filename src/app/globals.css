@@ -8,3 +8,9 @@
   --common-color: #000;
   --foreground-color: theme(textColor.neutral.600);
 }
+
+@layer components {
+  .set-size {
+    @apply sm:w-[92%] md:w-[85%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%];
+  }
+}

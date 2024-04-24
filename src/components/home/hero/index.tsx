@@ -2,9 +2,10 @@ import ReachMeButton from "@/components/reach-me-button";
 import SocialsPanel from "@/components/socials-panel";
 import SvgDownload1 from "@/components/svg/Download1.svg";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
-const Hero = () => (
-  <section className="px-8 h-full flex-col items-center">
+const Hero = ({ className }: { className?: string }) => (
+  <section className={twMerge("px-8 sm:px-0 flex-col items-center", className)}>
     <h4 className="mb-2 font-victor-mono italic font-black text-3xl">Hi,</h4>
     <h3 className="mb-4 font-ojuju text-4xl font-black">I am</h3>
     <h1 className="mb-8 font-bricolage-grotesque text-6xl font-black">

@@ -1,14 +1,27 @@
+"use client";
+
 import Footer from "@/components/footer";
-import WorkSection from "@/components/home/work-section";
-import BlogsSection from "@/components/home/blogs-section";
 import Hero from "@/components/home/hero";
-import MeSection from "@/components/home/me-section";
+import { WorkAdvert, MeAdvert, BlogsAdvert } from "@/components/home/adverts";
 import ReachMe from "@/components/home/reach-me";
 import NavBar from "@/components/nav-bar";
 import SinCurve from "@/components/sin-curve";
+import { useMobile } from "@/lib/hooks";
+import AdvertsSection from "@/components/home/adverts-section";
 
-const Home = () => (
-  <main className="min-h-screen flex flex-col gap-8 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-2/5 m-auto">
+const Home = () => {
+  const isMobile = useMobile();
+
+  return (
+    <>
+      {isMobile && <HomeMobile />}
+      {!isMobile && <HomeDesktop />}
+    </>
+  );
+};
+
+const HomeMobile = () => (
+  <main className="min-h-screen flex flex-col gap-8 md:w-1/2  m-auto">
     <NavBar />
     <div className="h-[10vh]"></div>
     <Hero />
@@ -18,11 +31,22 @@ const Home = () => (
       lineWidth={4}
       className="px-8 w-full"
     />
-    <MeSection />
-    <WorkSection />
-    <BlogsSection />
+    <AdvertsSection />
     <ReachMe />
     <Footer />
+  </main>
+);
+
+const HomeDesktop = () => (
+  <main className="min-h-screen flex flex-col set-size m-auto py-20">
+    <NavBar />
+    <div className="h-[10vh]"></div>
+    <div className="flex sm:gap-8 lg:gap-16 xl:gap-24">
+      <div className="w-[52%]">
+        <Hero />
+      </div>
+      <AdvertsSection className="w-[48%]" />
+    </div>
   </main>
 );
 
