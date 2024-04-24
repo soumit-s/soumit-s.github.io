@@ -24,8 +24,8 @@ const ReachMeButton = () => {
         <FiMail className="w-4 h-4" />
       </button>
       {state === "cooldown" && (
-        <div className="fixed bottom-4 left-0 right-0">
-          <div className="m-auto w-fit bg-black text-white rounded-lg px-4 py-3 shadow-neutral-400 shadow-md font-reddit-mono text-sm">
+        <div className="fixed bottom-4 left-0 right-0 z-50">
+          <div className="m-auto w-fit bg-black text-white rounded-lg px-4 py-3 shadow-neutral-400/20 shadow-lg border border-neutral-600 font-reddit-mono text-sm">
             Email Copied 😊
           </div>
         </div>
