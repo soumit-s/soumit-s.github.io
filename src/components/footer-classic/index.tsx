@@ -44,6 +44,7 @@ const FooterClassic = () => (
           href={s.href ?? ""}
           className="p-2 border border-neutral-300 rounded-full inline-block"
           variants={socialsVariants}
+          whileHover={{ translateY: -10 }}
         >
           <s.Icon className="w-6 h-6 fill-black" />
         </motion.a>
