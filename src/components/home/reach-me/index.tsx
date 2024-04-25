@@ -3,9 +3,16 @@ import Image from "next/image";
 
 import SvgSteam from "@/components/svg/Steam1.svg";
 import SvgDiscord from "@/components/svg/Discord1.svg";
+import { twMerge } from "tailwind-merge";
 
 const socials: Array<SocialInfo> = [
-  { id: 0, label: "Discord", Icon: () => <SvgDiscord className="w-8 h-8"/> },
+  {
+    id: 0,
+    label: "Discord",
+    Icon: ({ className }) => (
+      <SvgDiscord className={twMerge(className, "w-8 h-8")} />
+    ),
+  },
   { id: 1, label: "Steam", Icon: SvgSteam },
 ];
 

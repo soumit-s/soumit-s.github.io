@@ -9,7 +9,7 @@ const Advert = ({ title, children }: Props) => (
     <h1 className="font-bricolage-grotesque text-3xl font-black mb-4 flex gap-4 items-center">
       <SvgDiamond className="w-[0.8em] h-1[0.8em]"/>{title}
     </h1>
-    <div className="font-work-sans text-[0.93em] tracking-tight text-foreground">
+    <div className="font-work-sans text-[0.93em] tracking-tight leading-relaxed text-foreground">
       {children}
     </div>
   </div>

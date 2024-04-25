@@ -24,7 +24,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Honk&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&family=Ojuju:wght@200..800&family=Quicksand:wght@300..700&family=Reddit+Mono:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&family=Victor+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cedarville+Cursive&family=Honk&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&family=Ojuju:wght@200..800&family=Quicksand:wght@300..700&family=Reddit+Mono:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&family=Signika+Negative:wght@300..700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
       </head>

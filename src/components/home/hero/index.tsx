@@ -1,7 +1,5 @@
 import ReachMeButton from "@/components/reach-me-button";
 import SocialsPanel from "@/components/socials-panel";
-import SvgDownload1 from "@/components/svg/Download1.svg";
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 const Hero = ({ className }: { className?: string }) => (

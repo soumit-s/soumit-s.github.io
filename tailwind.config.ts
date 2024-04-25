@@ -23,6 +23,7 @@ const config: Config = {
         "fira-code": ["'Fira Code'", "monospace"],
         sedan: ["Sedan", "sans-serif"],
         "space-grotesk": ["'Space Grotesk'", "monospace"],
+        "cedarville-cursive": ["'Cedarville Cursive'", "cursive"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
