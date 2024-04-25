@@ -1,9 +1,14 @@
 import ReachMeButton from "@/components/reach-me-button";
 import SocialsPanel from "@/components/socials-panel";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 const Hero = ({ className }: { className?: string }) => (
-  <section className={twMerge("px-8 sm:px-0 flex-col items-center", className)}>
+  <motion.section
+    className={twMerge("px-8 sm:px-0 flex-col items-center", className)}
+    initial={{ opacity: 0, translateY: 20 }}
+    whileInView={{ opacity: 1, translateY: 0 }}
+  >
     <h4 className="mb-2 font-victor-mono italic font-black text-3xl">Hi,</h4>
     <h3 className="mb-4 font-ojuju text-4xl font-black">I am</h3>
     <h1 className="mb-8 font-bricolage-grotesque text-6xl font-black">
@@ -19,7 +24,7 @@ const Hero = ({ className }: { className?: string }) => (
       <ReachMeButton />
       <SocialsPanel />
     </div>
-  </section>
+  </motion.section>
 );
 
 const Kwd = ({ children }: React.PropsWithChildren) => (
