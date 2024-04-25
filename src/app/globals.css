@@ -10,6 +10,10 @@
 }
 
 @layer components {
+  body {
+    @apply cursor-default;
+  }
+
   .set-size {
     @apply sm:w-[92%] md:w-[85%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%];
   }
