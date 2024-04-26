@@ -15,8 +15,8 @@ export type SocialInfo = {
 };
 
 const SOCIALS: Array<SocialInfo> = [
-  { id: 0, label: "Github", Icon: SvgGithub },
-  { id: 1, label: "LinkedIn", Icon: SvgLinkedin },
+  { id: 0, label: "Github", Icon: SvgGithub, href: "https://github.com/soumit-s" },
+  { id: 1, label: "LinkedIn", Icon: SvgLinkedin, href: "https://www.linkedin.com/in/soumit-srimany-4bb443241" },
 ];
 
 const SocialsPanel = ({

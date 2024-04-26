@@ -10,10 +10,10 @@ import { SocialInfo } from "../socials-panel";
 import SinCurve from "@/components/sin-curve";
 
 const socialsInfo: Array<SocialInfo> = [
-  { id: 0, label: "Discord", Icon: SvgDiscord },
-  { id: 1, label: "Steam", Icon: SvgSteam },
-  { id: 2, label: "Github", Icon: SvgGithub },
-  { id: 3, label: "Unsplash", Icon: SvgUnsplash },
+  { id: 0, label: "Discord", Icon: SvgDiscord, href: "https://discord.com/users/883661422444306432" },
+  { id: 1, label: "Steam", Icon: SvgSteam, href: "" },
+  { id: 2, label: "Github", Icon: SvgGithub, href: "https://github.com/soumit-s" },
+  { id: 3, label: "Unsplash", Icon: SvgUnsplash, href: "https://unsplash.com/@soumit_s" },
 ];
 
 const socialsVariants: Variants = {
