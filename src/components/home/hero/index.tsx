@@ -15,10 +15,8 @@ const Hero = ({ className }: { className?: string }) => (
       Soumit Srimany
     </h1>
     <p className="font-work-sans tracking-tight text-foreground leading-relaxed text-[0.98em]">
-      As a <Kwd>fullstack</Kwd> developer, I create <Kwd>simple</Kwd>,{" "}
-      <Kwd>elegant</Kwd> and <Kwd>fluid</Kwd>&nbsp; user interfaces, paired with{" "}
-      <u>performant</u>, <u>scalable</u> and <u>fault-tolerant</u> backend
-      services.
+      Fullstack Developer from India, pursuing a degree in Computer Science.
+      Currently working as Backend Developer at Fyipen.
     </p>
     <div className="mt-8 flex gap-8">
       <ReachMeButton />
