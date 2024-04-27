@@ -4,14 +4,26 @@ import ReachMe from "@/components/home/reach-me";
 import NavBar from "@/components/nav-bar";
 import SinCurve from "@/components/sin-curve";
 import { useMobile } from "@/lib/hooks";
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import HeroSection from "@/components/home/hero";
 import FooterClassic from "@/components/footer-classic";
+import { useThemeStore } from "@/lib/stores";
 
 const AdvertsSection = lazy(() => import("@/components/home/adverts-section"));
 
 const Home = () => {
   const isMobile = useMobile();
+  const theme = useThemeStore((state) => state.getCurrentTheme());
+
+  useEffect(() => {
+    const root: HTMLElement = document.querySelector(":root") as HTMLElement;
+    for (const [k, v] of Object.entries(theme.colors)) {
+      const propName = `--${k}-color`;
+      console.log(propName, v);
+      root.style.setProperty(propName, v);
+    }
+  }, [theme]);
+
   return isMobile ? <HomeMobile /> : <HomeDesktop />;
 };
 

@@ -9,8 +9,8 @@ type Props = React.PropsWithChildren<{
 
 const Advert = ({ title, children }: Props) => (
   <motion.div className="group" whileHover={{ translateX: 5 }}>
-    <h1 className="w-fit font-bricolage-grotesque text-3xl font-black mb-4 flex gap-4 items-center cursor-pointer relative group/link">
-      <SvgDiamond className="w-[0.8em] h-1[0.8em]" />
+    <h1 className="w-fit font-bricolage-grotesque text-3xl text-accent font-black mb-4 flex gap-4 items-center cursor-pointer relative group/link">
+      <SvgDiamond className="w-[0.8em] h-1[0.8em] fill-accent" />
       {title}
       <motion.div
         className="hidden group-hover:block"
@@ -28,8 +28,8 @@ const Advert = ({ title, children }: Props) => (
 );
 
 const LinkIcon = ({ className } : { className?: string }) => (
-  <div className={twMerge("bg-black p-1 rounded transition-all duration-300", className)}>
-    <SvgLink className="w-4 h-4 stroke-white" />
+  <div className={twMerge("bg-accent p-1 rounded transition-all duration-300", className)}>
+    <SvgLink className="w-4 h-4 stroke-background" />
   </div>
 );
 

@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --socials-color: #888;
+  --socials-color: #aaa;
   --accent-color: #000;
-  --common-color: #000;
+  --common-color: #ddd;
+  --background-color: white;
+  --border-color: theme(textColor.neutral.300);
   --foreground-color: theme(textColor.neutral.600);
+  --signature-color: theme(textColor.neutral.500);
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 @layer components {
+  * {
+    @apply transition-colors duration-300;
+  }
+
   body {
     @apply cursor-default;
   }

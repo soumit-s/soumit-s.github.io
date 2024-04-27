@@ -9,9 +9,9 @@ const Hero = ({ className }: { className?: string }) => (
     initial={{ opacity: 0, translateY: 20 }}
     whileInView={{ opacity: 1, translateY: 0 }}
   >
-    <h4 className="mb-2 font-victor-mono italic font-black text-3xl">Hi,</h4>
-    <h3 className="mb-4 font-ojuju text-4xl font-black">I am</h3>
-    <h1 className="mb-8 font-bricolage-grotesque text-6xl font-black">
+    <h4 className="mb-2 font-victor-mono italic font-black text-3xl text-accent">Hi,</h4>
+    <h3 className="mb-4 font-ojuju text-4xl font-black text-accent">I am</h3>
+    <h1 className="mb-8 font-bricolage-grotesque text-6xl font-black text-accent">
       Soumit Srimany
     </h1>
     <p className="font-work-sans tracking-tight text-foreground leading-relaxed text-[0.98em]">

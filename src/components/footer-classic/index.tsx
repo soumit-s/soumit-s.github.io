@@ -24,14 +24,14 @@ const socialsVariants: Variants = {
 const FooterClassic = () => (
   <footer className="py-8 flex gap-8 items-center">
     <motion.div
-      className="py-4 font-bricolage-grotesque text-neutral-500 font-extralight flex items-center gap-2 shrink-0"
+      className="py-4 font-bricolage-grotesque text-signature font-extralight flex items-center gap-2 shrink-0"
       initial={{ opacity: 0, translateX: -20 }}
       whileInView={{ opacity: 1, translateX: 0 }}
     >
       Made with <SvgHeart className="w-6 h-6" /> by{" "}
       <b className="font-black">me</b>
     </motion.div>
-    <hr className="w-full border-neutral-300" />
+    <hr className="w-full border-border" />
     <motion.div
       className="flex gap-4 items-center"
       transition={{ staggerChildren: 0.1 }}
@@ -42,17 +42,17 @@ const FooterClassic = () => (
         <motion.a
           key={s.id}
           href={s.href ?? ""}
-          className="p-2 border border-neutral-300 rounded-full inline-block"
+          className="p-2 border border-border rounded-full inline-block"
           variants={socialsVariants}
           whileHover={{ translateY: -10 }}
         >
-          <s.Icon className="w-6 h-6 fill-black" />
+          <s.Icon className="w-6 h-6 fill-accent" />
         </motion.a>
       ))}
     </motion.div>
-    <hr className="w-full border-neutral-300" />
+    <hr className="w-full border-border" />
     <motion.div
-      className="shrink-0 font-cedarville-cursive font-medium text-xl text-neutral-500"
+      className="shrink-0 font-cedarville-cursive font-medium text-xl text-signature"
       initial={{ opacity: 0, translateX: 20 }}
       whileInView={{ opacity: 1, translateX: 0 }}
     >

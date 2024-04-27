@@ -13,6 +13,9 @@ const config: Config = {
         common: "var(--common-color)",
         accent: "var(--accent-color)",
         foreground: "var(--foreground-color)",
+        background: "var(--background-color)",
+        border: "var(--border-color)",
+        signature: "var(--signature-color)",
       },
       fontFamily: {
         "bricolage-grotesque": ["'Bricolage Grotesque'", "sans-serif"],

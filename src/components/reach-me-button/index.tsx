@@ -21,7 +21,7 @@ const ReachMeButton = () => {
   return (
     <>
       <button
-        className="px-5 py-3 text-neutral-300 bg-black rounded-md font-victor-mono italic text-[0.85em] font-black flex gap-3 items-center shadow-md"
+        className="px-5 py-3 text-background bg-accent rounded-md font-victor-mono italic text-[0.85em] font-black flex gap-3 items-center shadow-md"
         onClick={() => handleCopy("hi@soumit.me")}
       >
         Reach Me
