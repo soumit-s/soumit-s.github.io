@@ -46,7 +46,7 @@ const candySky: Theme = {
     accent: "#00215E",
     foreground: "#333",
     tertiary: "orange",
-    border: "#2C4E8055",
+    border: "color-mix(in srgb, red, #00215E99)",
     signature: "#00215E",
     socials: "#00215E",
   },

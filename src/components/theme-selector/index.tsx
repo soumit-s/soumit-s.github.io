@@ -8,18 +8,18 @@ const ThemeSelector = () => {
   const themes = useThemeStore((state) => state.themes);
   const setTheme = useThemeStore((state) => state.setTheme);
 
-  const getBg = ({displayStyle, colors}: Theme) => {
+  const getBg = ({ displayStyle, colors }: Theme) => {
     if (displayStyle) {
       const t = displayStyle();
-      if (typeof t === 'string') {
+      if (typeof t === "string") {
         return t;
       } else {
-        return `linear-gradient(0.12turn, ${t.from}, ${t.to})`
+        return `linear-gradient(0.12turn, ${t.from}, ${t.to})`;
       }
     } else {
       return `linear-gradient(0.12turn, ${colors.background}, ${colors.accent})`;
     }
-  }
+  };
 
   return (
     <div className="flex gap-4 items-center">
@@ -29,12 +29,16 @@ const ThemeSelector = () => {
           whileHover={{ scale: 1.1 }}
           onClick={() => setTheme(theme.id)}
           className={twMerge(
-            `p-4 rounded-full cursor-pointer`,
+            `p-4 rounded-full cursor-pointer relative overflow-hidden border border-foreground`,
             currentTheme.id === theme.id &&
-              "outline outline-4 outline-accent"
+              twMerge(
+                "outline outline-1 outline-offset-2 outline-border after:absolute after:content-['']",
+                "after:left-0 after:right-0 after:top-0 after:bottom-0",
+                "after:bg-black/30 after:z-10"
+              )
           )}
           style={{
-            background: getBg(theme)
+            background: getBg(theme),
           }}
         ></motion.div>
       ))}

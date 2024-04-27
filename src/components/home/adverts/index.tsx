@@ -12,7 +12,7 @@ export const BlogsAdvert = () => (
     title={
       <div className="flex gap-4 items-center">
         Blog
-        <div className="px-2 py-1 font-reddit-mono font-bold tracking-wide text-xs border-2 border-accent text-accent bg-background rounded">
+        <div className="px-2 py-1 font-reddit-mono font-bold tracking-wide text-xs border sm:border-2 border-accent text-accent bg-background rounded">
           Coming Soon
         </div>
       </div>

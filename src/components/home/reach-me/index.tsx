@@ -18,16 +18,16 @@ const socials: Array<SocialInfo> = [
 
 const ReachMe = () => (
   <section className="px-8 sm:px-0">
-    <div className="grid grid-cols-2 items-end border-y border-y-neutral-400 pt-8">
+    <div className="grid grid-cols-2 items-end border-y border-y-border pt-8">
       <div className="flex flex-col justify-between pb-4 gap-4">
-        <h1 className="font-bricolage-grotesque text-5xl lg:text-7xl font-black">
+        <h1 className="font-bricolage-grotesque text-5xl lg:text-7xl font-black text-accent">
           Let's talk
         </h1>
-        <p className="font-work-sans text-xs md:text-base sm:tracking-tight sm:font-light">
+        <p className="font-work-sans text-xs md:text-base sm:tracking-tight sm:font-light text-foreground">
           Some informal ways of reaching me
         </p>
         <div>
-          <SocialsPanel socials={socials} className="fill-black" />
+          <SocialsPanel socials={socials} className="fill-accent" />
         </div>
       </div>
       <div>

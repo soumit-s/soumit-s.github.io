@@ -6,41 +6,22 @@ import ThemeSelector from "../theme-selector";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import ResumeButton from "../resume-button";
 
 const NavBarMobile = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <motion.nav className="p-8 sm:px-0 flex justify-between">
       <SiteLogo />
-      <motion.div
-        layout
-        transition={{ duration: 1 }}
-        className="flex gap-4 items-center"
-      >
-        <Link
-          href=""
-          className={
-            "p-2 font-victor-mono italic text-xs sm:text-sm sm:px-4 border-2 border-border text-foreground rounded-md cursor-pointer group"
-          }
-        >
-          <motion.div layout className="flex items-center gap-2">
-            Resume
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              exit={{ scale: 0 }}
-              className="hidden group-hover:block"
-            >
-              <SvgDownload className="w-4 h-4 fill-black" />
-            </motion.div>
-          </motion.div>
-        </Link>
+      <div className="flex items-center gap-4">
+        <ResumeButton />
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ width: 0, opacity: 0 }}
-              whileInView={{ width: "auto", opacity: 1 }}
-              exit={{ width: 0, opacity: 0 }}
+              className="box-border"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
               <ThemeSelector />
             </motion.div>
@@ -62,7 +43,7 @@ const NavBarMobile = () => {
             <SvgBrush className="w-4 h-4 sm:w-5 sm:h-5 fill-background" />
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </motion.nav>
   );
 };

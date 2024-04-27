@@ -39,12 +39,12 @@ const getOnClickHandler = (onClick: string | React.MouseEventHandler) => {
 
 const Footer = ({ entries = footerEntries }: FooterProps) => (
   <section className="py-2 px-8 sm:px-0">
-    <div className="flex gap-4 justify-between font-work-sans text-neutral-800">
+    <div className="flex gap-4 justify-between font-work-sans text-signature">
       <div className="w-1/2">
-        <div className="font-victor-mono italic font-medium text-[0.77em] leading-6 mb-6">
+        <div className="text-accent font-victor-mono italic font-medium text-[0.77em] leading-6 mb-6">
           Want to start a conversation ? Email me at
         </div>
-        <div className="font-ojuju font-bold underline underline-offset-8 decoration-1 tracking-wider">
+        <div className="text-accent font-ojuju font-bold underline underline-offset-8 decoration-1 tracking-wider">
           hello@soumit.me
         </div>
       </div>
@@ -60,8 +60,8 @@ const Footer = ({ entries = footerEntries }: FooterProps) => (
         ))}
       </div>
     </div>
-    <div className="py-4 font-bricolage-grotesque font-light flex items-center gap-2">
-      Made with <SvgHeart className="w-6 h-6 text-red-500" /> by <b className="font-black">me</b>
+    <div className="py-4 font-bricolage-grotesque font-light flex items-center gap-2 text-accent">
+      Made with <SvgHeart className="w-6 h-6" /> by <b className="font-black">me</b>
     </div>
   </section>
 );
