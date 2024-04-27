@@ -4,16 +4,18 @@ import ReachMe from "@/components/home/reach-me";
 import NavBar from "@/components/nav-bar";
 import SinCurve from "@/components/sin-curve";
 import { useMobile } from "@/lib/hooks";
-import { lazy, useEffect } from "react";
+import { lazy, useEffect, useState } from "react";
 import HeroSection from "@/components/home/hero";
 import FooterClassic from "@/components/footer-classic";
 import { useThemeStore } from "@/lib/stores";
+import UnderConstructionBar from "@/components/under-construction-bar";
 
 const AdvertsSection = lazy(() => import("@/components/home/adverts-section"));
 
 const Home = () => {
   const isMobile = useMobile();
   const theme = useThemeStore((state) => state.getCurrentTheme());
+  const [isWarningVisible, setWarningVisibility] = useState(true);
 
   useEffect(() => {
     const root: HTMLElement = document.querySelector(":root") as HTMLElement;
@@ -24,7 +26,16 @@ const Home = () => {
     }
   }, [theme]);
 
-  return isMobile ? <HomeMobile /> : <HomeDesktop />;
+  return (
+    <>
+      {isWarningVisible && (
+        <div className="sm:fixed sm:bottom-0 sm:left-0 sm:right-0">
+          <UnderConstructionBar onClose={() => setWarningVisibility(false)} />
+        </div>
+      )}
+      {isMobile ? <HomeMobile /> : <HomeDesktop />}
+    </>
+  );
 };
 
 const HomeMobile = () => (
